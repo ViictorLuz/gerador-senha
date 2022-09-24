@@ -1,0 +1,110 @@
+* {
+    font-family: sans-serif;
+    width: 100%; /*Pegar 100% da página*/
+    margin: 0 auto; /*Sempre vai alinhar no centro quando for definir os tamanhos dos itens*/
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #18181B;
+    width: 100%; /*Largura*/
+    height: 100vh; /*Altura, vh-> viewport height Altura que mostra na tela*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /*Item abaixo do outro*/
+}
+
+.logo {
+    max-width: 600px; /*Largura máxima de 600px*/
+    margin-bottom: 24px; /*Margem embaixo*/
+}
+
+.container-input {
+    max-width: 480px;
+    margin: 14px 0;
+}
+
+.container-input span {
+    color: white; /*Cor da fonte*/
+    font-size: 22px; /*Tamanho da fonte*/
+}
+
+.slider {
+    -webkit-appearance: none; /*Tira a aparência de preechido da barra que seleciona a quantidade de caracteres da senha*/
+    width: 100%;
+    border-radius: 5px; /*Arredondar as bordas*/
+    background: #DFDFDF;
+    height: 18px;
+    outline: none;
+    margin-top: 8px; /*Para desgrudar do "Tamanho caracteres"*/
+}
+
+.button-cta {
+    height: 40px;
+    background-color: #3EB72B;
+    border: 0;
+    border-radius: 4px; /*Arredondar as bordas*/
+    cursor: pointer; /*Mãozinha de clicar*/
+    margin-top: 40px; /*Para desgrudar do slider*/
+    color: white;
+    font-weight: bolder; /*Para deixar em negrito*/
+    font-size: 18px;
+}
+
+.container-password {
+    max-width: 480px;
+    margin: 14px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /*Item abaixo do outro*/
+    cursor: pointer; /*Mãozinha de clicar*/
+}
+
+.title {
+    text-align: center; /*Alinhamento do texto*/
+    color: white;
+    font-size: 28px; /*Tamanho da fonte*/
+    margin-top: 24px; /*Margem em cima*/
+    margin-bottom: 8px; /*Margem embaixo*/
+}
+
+.password {
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.40);
+    border-radius: 4px; /*Arredondar as bordas*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 1px solid #313131;
+    transition: transform 0.5s; /*Transição para suavizar*/
+}
+
+.password:hover {
+    transform: scale(1.05); /*Da uma leve aumentada quando passa o mouse*/
+}
+
+.tooltip {
+    color: white;
+    position: relative; /*posiciona o elemento em relação a si mesmo. Ou seja, o ponto zero será o canto superior esquerdo, e ele começará a contar a partir dali.*/
+    top: 20px;
+    padding: 6px 8px;
+    background: rgb(15, 15, 15);
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    visibility: hidden; /*Vai sumir da tela*/
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.hide {
+    display: none; /*Vai tirar do display até clicar em gerar senha*/
+}
+
+.container-password:hover .tooltip{
+    visibility: visible; /*Quando passar o mouse, voltará a aparecer*/
+    bottom: 50px;
+    opacity: 1;
+}
